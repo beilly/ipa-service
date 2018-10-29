@@ -1,2 +1,2 @@
 # ipa-service
-提高iOS的ipa下载服务接口
+提供iOS的ipa下载服务接口
