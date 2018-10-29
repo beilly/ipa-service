@@ -120,6 +120,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+# Activate Django-Heroku.
+django_heroku.settings(locals())
+
 # Heroku settings
 cwd = os.getcwd()
 print("--- CWD ---\n", cwd, "\n---\n")
