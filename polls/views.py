@@ -18,7 +18,7 @@ def plist(request, ipa_id):
 
     logger.info(ipa_id)
 
-    result=[]
+    result = []
     for line in c:
         if '{{id}}' in line:
             line = line.replace('{{id}}', ipa_id)
