@@ -7,12 +7,13 @@ from django.http import HttpResponse
 logger = logging.getLogger("django")
 
 
+# 默认显示
 def index(request):
     r = requests.get('http://httpbin.org/status/418')
-    logger.info(r.text)
     return HttpResponse('<pre>' + r.text + '</pre>')
 
 
+# 获取plist
 def plist(request, pid, ipa_id):
     with open('static/' + pid + '.plist', 'r', encoding='UTF-8') as f:
         c = f.readlines()
