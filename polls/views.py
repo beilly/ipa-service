@@ -1,6 +1,7 @@
+import logging
+
 import requests
 from django.http import HttpResponse
-import logging
 
 # Create your views here.
 logger = logging.getLogger("django")
@@ -12,8 +13,8 @@ def index(request):
     return HttpResponse('<pre>' + r.text + '</pre>')
 
 
-def plist(request, ipa_id):
-    with open('static/dkw_ios_test.plist', 'r', encoding='UTF-8') as f:
+def plist(request, pid, ipa_id):
+    with open('static/' + pid + '.plist', 'r', encoding='UTF-8') as f:
         c = f.readlines()
 
     logger.info(ipa_id)
